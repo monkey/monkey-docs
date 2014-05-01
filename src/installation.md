@@ -29,7 +29,7 @@ $ make
 
 Monkey uses a similar autotools scripts to configure and set the proper enviroment. Also, you can configure Monkey with your specific paths, just run './configure -h' to get a full list of the available options as:
 
-```bash
+```shell
 $ ./configure --help
 Usage: ./configure [OPTION]... [VAR=VALUE]...
 
@@ -81,13 +81,13 @@ Monkey configuration system is designed to let run the service from the local di
 
 If the compilation process has ended successfully, you are ready to run Monkey Web Server executing the following command:
 
-```
+```shell
 $ bin/monkey
 ```
 
 once the server has started up, you should get something like this in your console:
 
-```
+```shell
 $ bin/monkey
 Monkey HTTP Daemon 1.5.0
 Built : Apr 30 2014 22:08:39 (gcc 4.8.2)

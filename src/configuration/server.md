@@ -132,8 +132,8 @@ When a static file is requested and it does not contain a known extension based 
 
 ### FDT
 
-The File Descriptor Table (FDT) it's an internal mechanism to share open file descriptors under specific threads and virtual host context. When enabled, it helps to reduce the number of opened file descriptors for the same resource and the number of required system calls to open and close  files.
+The File Descriptor Table (FDT) it's an internal mechanism to share open file descriptors under specific threads and virtual host context. When enabled, it helps to reduce the number of opened file descriptors for the same resource and the number of required system calls to open and close files.
 
-The overhead in memory of this feature is around ~5KB per worker.
+The overhead in memory of this feature is around ~5KB per worker. The key accepts boolean values __on__ and __off__. By default this value is __on__.
 
-    FDT On
+    FDT on

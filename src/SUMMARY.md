@@ -11,3 +11,13 @@
     * Plugins
 * [Virtual Hosts](virtualhosts/README.md)
     * [Configuring](virtualhosts/configuring.md)
+* [Plugins](plugins/README.md)
+    * [Basic Authentication](plugins/basic_auth.md)
+    * CGI
+    * Directory Listing
+    * FastCGI
+    * Log Writer
+    * Liana
+    * [Mandril Security](plugins/mandril_security.md)
+    * Proxy Reverse
+    * SSL

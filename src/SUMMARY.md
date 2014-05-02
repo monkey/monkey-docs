@@ -9,6 +9,7 @@
     * [Server Core](configuration/server.md)
     * Mimetypes
     * Plugins
+    * [IPv6](configuration/ipv6.md)
 * [Virtual Hosts](virtualhosts/README.md)
     * [Configuring](virtualhosts/configuring.md)
 * [Plugins](plugins/README.md)

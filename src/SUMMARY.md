@@ -22,7 +22,7 @@
     * Liana
     * [Mandril Security](plugins/mandril_security.md)
     * Proxy Reverse
-    * SSL
+    * [Secure Socket Layers](plugins/polarssl.md)
 * Embedded Linux
     * Monkey for Embedded
     * Raspberry Pi

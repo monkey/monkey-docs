@@ -4,12 +4,13 @@
 
 Plugins are shared library loaded on startup once the Server reads the content of the __plugins.load__ configuration file. The current plugins distributed on Monkey sources allows to provide the following extra features:
 
- * Basic Authentication
+ * [Basic Authentication](basic_auth.md)
+ * [Cheetah! Shell](cheetah_shell.md)
  * CGI
  * Directory Listing
  * FastCGI
  * Log Writer
  * Plain socket transport
- * Security Rules
+ * [Mandril Security](mandril_security.md)
  * Proxy Reverse
- * Secure Socket Layer (HTTPS)
+ * [Secure Socket Layer (SSL/HTTPS)](polarssl.md)

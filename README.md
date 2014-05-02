@@ -4,7 +4,7 @@ Monkey is a fully featured HTTP Server for Linux. The present repository contain
 
 ## How the documentation is built
 
-All documentation is made in GIT Flavored Markdown format and is rendered using the [Gitbook](https://github.com/GitbbokIO/gitbook) tool. To generate a HTML documenation from this source please issue the following command:
+All documentation is made in GIT Flavored Markdown format and is rendered using the [Gitbook](https://github.com/GitbookIO/gitbook) tool. To generate a HTML documenation from this source please issue the following command:
 
 ```shell
 $ gitbook serve -p 9000 src/

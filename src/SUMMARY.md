@@ -13,6 +13,7 @@
     * [Configuring](virtualhosts/configuring.md)
 * [Plugins](plugins/README.md)
     * [Basic Authentication](plugins/basic_auth.md)
+    * [Cheetah! Shell](plugins/cheetah_shell.md)
     * CGI
     * Directory Listing
     * FastCGI
@@ -21,3 +22,6 @@
     * [Mandril Security](plugins/mandril_security.md)
     * Proxy Reverse
     * SSL
+* Embedded Linux
+    * Monkey for Embedded
+    * Raspberry Pi

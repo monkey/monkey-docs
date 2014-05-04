@@ -9,7 +9,7 @@
     * [Files Schema](configuration/files_schema.md)
     * [Server Core](configuration/server.md)
     * [MIME Types](configuration/mimetypes.md)
-    * Plugins
+    * [Plugins](configuration/plugins.md)
     * [IPv6](configuration/ipv6.md)
 * [Virtual Hosts](virtualhosts/README.md)
     * [Configuring](virtualhosts/configuring.md)

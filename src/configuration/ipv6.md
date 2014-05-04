@@ -12,7 +12,7 @@ $ [ -f /proc/net/if_inet6 ] && echo 'IPv6 system ready!' || echo 'No IPv6 suppor
 
 ## IPv6 system ready!
 
-If your system is ready for IPv6 you will get the message IPv6 ready system!, if not, we suggest to review your distribution documentation about how to make it work. Those steps are out of the scope of this document.
+If your system is ready for IPv6 you will get the message __IPv6 system ready!__, if not, we suggest to review your distribution documentation about how to make it work. Those steps are out of the scope of this document.
 
 Now you could check which interfaces have an IPv6 address ready to use:
 
@@ -23,7 +23,7 @@ fe800000000000005e260afffe750bce 02 40 20 80     eth0
 00000000000000000000000000000001 01 80 10 80       lo
 ```
 
-On this example the interfaces wlan0, eth0 and lo can be used by Monkey with IPv6.
+On this example the interfaces __wlan0__, __eth0__ and __lo__ can be used by Monkey with IPv6.
 
 ## Setup
 

@@ -28,4 +28,5 @@
     * Raspberry Pi
 * [Debugging](debugging/README.md)
     * [GNU Debugger](debugging/gdb.md)
+    * Monkey Trace mode
     * [Linux Trace Toolkit](debugging/lttng.md)

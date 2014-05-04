@@ -28,3 +28,4 @@
     * Raspberry Pi
 * [Debugging](debugging/README.md)
     * [GNU Debugger](debugging/gdb.md)
+    * [Linux Trace Toolkit](debugging/lttng.md)

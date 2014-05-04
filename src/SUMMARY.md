@@ -10,6 +10,7 @@
     * Mimetypes
     * Plugins
     * [IPv6](configuration/ipv6.md)
+    * Memory Allocator
 * [Virtual Hosts](virtualhosts/README.md)
     * [Configuring](virtualhosts/configuring.md)
 * [Plugins](plugins/README.md)

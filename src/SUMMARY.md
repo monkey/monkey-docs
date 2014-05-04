@@ -19,7 +19,7 @@
     * Directory Listing
     * FastCGI
     * Log Writer
-    * Liana
+    * [Liana](plugins/liana.md)
     * [Mandril Security](plugins/mandril_security.md)
     * Proxy Reverse
     * [Secure Socket Layers](plugins/polarssl.md)

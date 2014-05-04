@@ -26,3 +26,5 @@
 * Embedded Linux
     * Monkey for Embedded
     * Raspberry Pi
+* [Debugging](debugging/README.md)
+    * [GNU Debugger](debugging/gdb.md)

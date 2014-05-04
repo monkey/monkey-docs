@@ -3,14 +3,14 @@
 * [Getting Started](getting_started/README.md)
     * [About](getting_started/about.md)
     * [Installation](getting_started/installation.md)
+    * Memory Allocator
 * [Configuration](configuration/README.md)
     * [Structure](configuration/structure.md)
-    * Indented mode
+    * [Files Schema](configuration/files_schema.md)
     * [Server Core](configuration/server.md)
     * Mimetypes
     * Plugins
     * [IPv6](configuration/ipv6.md)
-    * Memory Allocator
 * [Virtual Hosts](virtualhosts/README.md)
     * [Configuring](virtualhosts/configuring.md)
 * [Plugins](plugins/README.md)

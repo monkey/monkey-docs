@@ -8,7 +8,7 @@
     * [Structure](configuration/structure.md)
     * [Files Schema](configuration/files_schema.md)
     * [Server Core](configuration/server.md)
-    * Mimetypes
+    * [MIME Types](configuration/mimetypes.md)
     * Plugins
     * [IPv6](configuration/ipv6.md)
 * [Virtual Hosts](virtualhosts/README.md)

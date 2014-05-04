@@ -3,7 +3,7 @@
 * [Getting Started](getting_started/README.md)
     * [About](getting_started/about.md)
     * [Installation](getting_started/installation.md)
-    * Memory Allocator
+    * [Memory Allocator](getting_started/memory_allocator.md)
 * [Configuration](configuration/README.md)
     * [Structure](configuration/structure.md)
     * [Files Schema](configuration/files_schema.md)

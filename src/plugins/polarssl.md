@@ -45,16 +45,11 @@ $ CFLAGS="-Ipath/to/polarsssl/include" \
 $ make
 ```
 
-## Configuring Monkey for HTTPS
+## Enable Plugin
 
-To let Monkey use HTTPS, we need to load the __PolarSSL Plugin__ and use it as the default __transport layer__. In the file __conf/plugins.load__ make sure the plugin is enabled:
+To enable the __PolarSSL__ plugin, please follow the steps mentioned on [Plugins](../configuration/plugins.md) section. The plugin name is __monkey-polarssl.so__, so make sure the plugin entry is __Load__ and the absolute path is correct.
 
-```Python
-[PLUGINS]
-    Load path/to/monkey-polarssl.so
-```
-
-> The line needs to be uncommented, also verify the path points to the right __monkey-polarssl.so__.
+## Configuring
 
 Now the plugin is enabled, but we need to instruct Monkey to use a different plugin as the __transport layer__. On the file __conf/monkey.conf__, locate the __SERVER__ section and look at the __TransportLayer__ key, we need to replace the old transport layer called __liana__ by __polarssl__:
 

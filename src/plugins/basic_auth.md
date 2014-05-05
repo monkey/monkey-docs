@@ -6,17 +6,11 @@ In order to enable basic authentication (basic auth for short) in Monkey you mus
 
 The basic auth works is designed to work at Virtual Host level, so you are able to protect specific Virtual Hosts and apply different set of users for each one. Please refer to the following section about how to setup basic auth.
 
+## Enable Plugin
+
+To enable the __Auth__ plugin, please follow the steps mentioned on [Plugins](../configuration/plugins.md) section. The plugin name is __monkey-auth.so__, so make sure the plugin entry is __Load__ and the absolute path is correct.
+
 ## Configuring
-
-Make sure __Auth plugin__ is enabled in your Monkey configuration, open your __conf/plugins.load__ configuration file and find a similar entry like this:
-
-```Python
-[PLUGINS]
-    # HTTP Basic Authentication
-    # =========================
-    #
-    Load /home/foo/monkey/plugins/auth/monkey-auth.so
-```
 
 Once the plugin is loaded you want to have a list of users who will access the Virtual Host. The Auth plugin distribute a tool named mk_passwd which allows to manage users in a static file. This tool is pretty similar to htpasswd from Apache but the format to store the users is different.
 

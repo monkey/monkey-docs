@@ -6,19 +6,11 @@ Retrieve information from a running web server is very important when monitoring
 
 Cheetah! can be accessed from the command line through STDIN if Monkey did not go in background or directly through a unix pipe. Lets review how to make it work.
 
+## Enable Plugin
+
+To enable the __Cheetah!__ plugin, please follow the steps mentioned on [Plugins](../configuration/plugins.md) section. The plugin name is __monkey-cheetah.so__, so make sure the plugin entry is __Load__ and the absolute path is correct.
+
 ## Configuring
-
-Make sure the Cheetah! plugin is enabled in your Monkey configuration, open your __conf/plugins.load__ configuration file and find a similar entry like this:
-
-```Python
-[PLUGINS]
-    # Cheetah! Plugin
-    # ===============
-    # This plugin provides a command line interface for Monkey,
-    # it works like a shell.
-    #
-    Load /home/foo/monkey/plugins/cheetah/monkey-cheetah.so
-```
 
 Once the plugin is loaded, we need to proceed to edit the Cheetah! configuration file which could be located in the Monkey configuration directory like __conf/plugins/cheetah/cheetah.conf__.
 

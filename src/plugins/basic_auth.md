@@ -17,7 +17,7 @@ Once the plugin is loaded you want to have a list of users who will access the V
 Create an initial users file with one user:
 
 ```
-$ mk_passwd -c -b /etc/monkey/plugins/auth/users.mk  myuser mypassword
+$ mk_passwd -c /etc/monkey/plugins/auth/users.mk  myuser mypassword
 ```
 
 Now you will have a users.mk file containing the new user, the file content should looks like:
@@ -30,7 +30,7 @@ myuser:{SHA1}kd/Z3bQZiv/FwZTNjObTOP3kcOI=
 You can add subsequent users with the same command but omitting the __-c__ flag as this instruct mk_passwd to create a new file, e.g:
 
 ```
-$ mk_passwd -b /etc/monkey/plugins/auth/users.mk  my_second_user some_password
+$ mk_passwd /etc/monkey/plugins/auth/users.mk  my_second_user some_password
 $ cat users.mk
 myuser:{SHA1}kd/Z3bQZiv/FwZTNjObTOP3kcOI=
 my_second_user:{SHA1}cWX21AfcL9aFKNpjJgqRPnFiPoY=

@@ -1,6 +1,6 @@
 # Mandril Security Plugin
 
-__Mandril is a plugin which provides a security layer to Monkey through rules which can be applied to the request URI or by network address.
+__Mandril__ is a plugin which provides a security layer to Monkey through rules which can be applied to the request URI or by network address.
 
 ## Introduction
 

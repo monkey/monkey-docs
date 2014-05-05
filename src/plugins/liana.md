@@ -18,3 +18,7 @@ In technical terms, the __Liana__ functionalities are:
 * Send a file
 
 Any other plugin that act as a __Transport Layer__ may implement the same functionalities described above, as an example of a plugin using SSL encryption refer to the [PolarSSL](polarssl.md) plugin.
+
+## Enable Plugin
+
+To enable the __Liana__ plugin, please follow the steps mentioned on [Plugins](../configuration/plugins.md) section. The plugin name is __monkey-liana.so__, so make sure the plugin entry is __Load__ and the absolute path is correct.

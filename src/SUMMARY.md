@@ -16,7 +16,7 @@
 * [Plugins](plugins/README.md)
     * [Basic Authentication](plugins/basic_auth.md)
     * [Cheetah! Shell](plugins/cheetah_shell.md)
-    * CGI
+    * [CGI](plugins/cgi.md)
     * Directory Listing
     * FastCGI
     * Log Writer

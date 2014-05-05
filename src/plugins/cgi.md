@@ -8,7 +8,7 @@ When a program runs using the CGI interface, the server will spawn a new process
 
 ## Enable Plugin
 
-To enable the CGI plugin, make sure it's enabled according to the steps mentioned on [Plugins](../configuration/plugins.md) section. The plugin name is __monkey-cgi.so__, make sure the plugin is __Load__ and the absolute path is correct.
+To enable the __CGI__ plugin, please follow the steps mentioned on [Plugins](../configuration/plugins.md) section. The plugin name is __monkey-cgi.so__, so make sure the plugin entry is __Load__ and the absolute path is correct.
 
 ## Configuring
 

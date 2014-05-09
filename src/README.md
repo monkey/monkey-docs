@@ -4,4 +4,6 @@
 
 [Monkey](http://monkey-project.com) is properly supported on ARM, x86 and x64, being able to work in any architecture and device capable to run a Linux Kernel.
 
-[Monkey](http://monkey-project.com) is Licensed under the terms of the LGPLv2.
+[Monkey](http://monkey-project.com) is Copyrighted by [Monkey Software LLC](http://monkey.io) and [Eduardo Silva Pereira](mailto:eduardo@monkey.io)
+
+[Monkey](http://monkey-project.com) is Licensed under the terms of the [Apache License v2.0](about/license.md).

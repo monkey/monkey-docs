@@ -1,7 +1,8 @@
 # Summary
 
+* [About](about/README.md)
+    * [License](about/license.md)
 * [Getting Started](getting_started/README.md)
-    * [About](getting_started/about.md)
     * [Installation](getting_started/installation.md)
     * [Memory Allocator](getting_started/memory_allocator.md)
 * [Configuration](configuration/README.md)

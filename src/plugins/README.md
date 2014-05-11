@@ -6,10 +6,10 @@ Plugins are shared library loaded on startup once the Server reads the content o
 
  * [Basic Authentication](basic_auth.md)
  * [Cheetah! Shell](cheetah_shell.md)
- * CGI
- * Directory Listing
+ * [CGI](cgi.md)
+ * [Directory Listing](dirlisting.md)
  * FastCGI
- * Log Writer
+ * [Log Writer](log_writer.md)
  * [Liana: plain sockets transport](liana.md)
  * [Mandril Security](mandril_security.md)
  * Proxy Reverse

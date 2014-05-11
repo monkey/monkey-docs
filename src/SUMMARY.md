@@ -18,7 +18,7 @@
     * [Basic Authentication](plugins/basic_auth.md)
     * [Cheetah! Shell](plugins/cheetah_shell.md)
     * [CGI](plugins/cgi.md)
-    * Directory Listing
+    * [Directory Listing](plugins/dirlisting.md)
     * FastCGI
     * [Log Writer](plugins/log_writer.md)
     * [Liana](plugins/liana.md)

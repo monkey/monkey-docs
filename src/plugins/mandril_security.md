@@ -1,10 +1,11 @@
-# Mandril Security Plugin
+# Mandril Security
 
 __Mandril__ is a plugin which provides a security layer to Monkey through rules which can be applied to the request URI or by network address.
 
-## Introduction
+For every incoming connection, the plugin take the defined security rules and check at first instance the incoming IP address and then the HTTP request, if some rule matches the server will behave as follows:
 
-__Mandril__ is a core plugin which allow to define security rules to be applied to the incomming connections. If the client is rejected by some of these rules, it will get the 403 Forbidden error status.
+* For a restricted IP address, it will drop the connection.
+* For a restrictet HTTP Request, it will return a __403 Forbidden__ HTTP error.
 
 ## Enable Plugin
 

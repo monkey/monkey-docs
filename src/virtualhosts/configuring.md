@@ -33,6 +33,16 @@ DocumentRoot /home/foo/monkey/htdocs
 > The path must be a valid directory.
 
 
+### Redirect
+
+In some cases you may want the HTTP server redirects each incoming request to the Virtual Host in question to a different location. For that purpose the key __Redirect__ exists and can be assigned to any valid HTTP URL value, e.g:
+
+```
+Redirect http://monkey-project.com
+```
+
+Just note that the HTTP request will not be processed and just a HTTP redirect response will be send to the client.
+
 ## ERROR_PAGES
 
 When the resource requested by the HTTP client do not exists or cannot be accessed by some reason, a generic built-in page is serve explaining the nature of the problem. The __ERROR_PAGES__ section defined in the Virtual Host configuration, allow to specify custom HTML pages to be serve when a specific HTTP error status is faced, an example of common errors are:

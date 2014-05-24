@@ -25,9 +25,9 @@
     * [Mandril Security](plugins/mandril_security.md)
     * Proxy Reverse
     * [Secure Socket Layers](plugins/polarssl.md)
-* Embedded Linux
-    * Monkey for Embedded
+* [Embedded Linux](embedded/README.md)
     * Raspberry Pi
+    * Yocto Project
 * [Debugging](debugging/README.md)
     * [GNU Debugger](debugging/gdb.md)
     * [Monkey Trace mode](debugging/monkey_trace.md)

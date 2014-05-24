@@ -26,7 +26,7 @@
     * Proxy Reverse
     * [Secure Socket Layers](plugins/polarssl.md)
 * [Embedded Linux](embedded/README.md)
-    * Raspberry Pi
+    * [Raspberry Pi](embedded/raspberry.md)
     * Yocto Project
 * [Debugging](debugging/README.md)
     * [GNU Debugger](debugging/gdb.md)

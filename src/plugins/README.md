@@ -12,5 +12,4 @@ Plugins are shared library loaded on startup once the Server reads the content o
  * [Log Writer](log_writer.md)
  * [Liana: plain sockets transport](liana.md)
  * [Mandril Security](mandril_security.md)
- * Proxy Reverse
  * [Secure Socket Layer (SSL/HTTPS)](polarssl.md)

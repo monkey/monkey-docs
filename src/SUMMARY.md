@@ -23,7 +23,6 @@
     * [Log Writer](plugins/log_writer.md)
     * [Liana](plugins/liana.md)
     * [Mandril Security](plugins/mandril_security.md)
-    * Proxy Reverse
     * [Secure Socket Layers](plugins/polarssl.md)
 * [Embedded Linux](embedded/README.md)
     * [Raspberry Pi](embedded/raspberry.md)

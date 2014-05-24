@@ -19,7 +19,7 @@
     * [Cheetah! Shell](plugins/cheetah_shell.md)
     * [CGI](plugins/cgi.md)
     * [Directory Listing](plugins/dirlisting.md)
-    * FastCGI
+    * [FastCGI](plugins/fastcgi.md)
     * [Log Writer](plugins/log_writer.md)
     * [Liana](plugins/liana.md)
     * [Mandril Security](plugins/mandril_security.md)

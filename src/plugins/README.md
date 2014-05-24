@@ -8,7 +8,7 @@ Plugins are shared library loaded on startup once the Server reads the content o
  * [Cheetah! Shell](cheetah_shell.md)
  * [CGI](cgi.md)
  * [Directory Listing](dirlisting.md)
- * FastCGI
+ * [FastCGI](fastcgi.md)
  * [Log Writer](log_writer.md)
  * [Liana: plain sockets transport](liana.md)
  * [Mandril Security](mandril_security.md)

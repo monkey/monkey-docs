@@ -26,7 +26,7 @@
     * [Secure Socket Layers](plugins/polarssl.md)
 * [Embedded Linux](embedded/README.md)
     * [Raspberry Pi](embedded/raspberry.md)
-    * Yocto Project
+    * [Yocto Project](embedded/yocto.md)
 * [Debugging](debugging/README.md)
     * [GNU Debugger](debugging/gdb.md)
     * [Monkey Trace mode](debugging/monkey_trace.md)

@@ -4,7 +4,7 @@
 
 ## Requirements
 
-As said, the __PolarSSL__ plugin requires to have access to the [PolarSSL Library](http://polarssl.org), we suggest to use any version >= 1.3. Besides that the only extra requirement is an updated __GCC compiler__ and the __automake__ tool.
+As said, the __PolarSSL__ plugin requires to have access to the [PolarSSL Library](http://polarssl.org), we strongly suggest to use version >= 1.3.7. If that version is not available on your Linux distribution you may consider to compile it from sources. Besides that, the only extra requirement is an updated __GCC compiler__ and the __automake__ tool.
 
 If a new [PolarSSL Library](http://polarssl.org) will be build, it will be required to have the __cmake__ tool installed on the system too.
 
@@ -40,7 +40,7 @@ After the library has been built we need to reconfigure Monkey. To help Monkey f
 ```shell
 $ cd monkey
 $ CFLAGS="-Ipath/to/polarsssl/include" \
-> LDFLAGS="-Lpath/to/]olarssl/library -Wl,-rpath=path/to/polarssl/library" \
+> LDFLAGS="-Lpath/to/polarssl/library -Wl,-rpath=path/to/polarssl/library" \
 > ./configure --enable-plugins=polarssl
 $ make
 ```

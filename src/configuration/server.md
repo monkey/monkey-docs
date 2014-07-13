@@ -54,7 +54,7 @@ Monkey is capable to serve public system users directories, they are accessed th
 
 ### IndexFile
 
-When an incoming HTTP request arrives and it's mapped to a file system directory, the Server needs to know which file serve by default. The IndexFile key allows to define multiple files that are looked up in order.
+When an incoming HTTP request arrives and it's mapped to a file system directory, the Server needs to know which file serve by default. The IndexFile key allows to define multiple files that are looked up in order, the values must be file names, not relative or absolute paths.
 
     Indexfile index.html index.htm index.php
 

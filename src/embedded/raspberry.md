@@ -28,12 +28,6 @@ After that last step, Monkey will be already running , you can do a simple test 
 curl -i http://raspberry_ip:2001/
 ```
 
-## Using Secure Socket Layers (SSL)
+## Using Secure Socket Layers (SSL/TLS)
 
-Monkey supports SSL through the [PolarSSL](http://polarssl.org) library. In order to install the SSL plugin and it dependencies run the following command:
-
-```Shell
-$ sudo apt-get install monkey-polarssl libpolarssl
-```
-
-the next steps are configure Monkey to use the monkey-polarssl plugin as the default transport layer. For more details please refer to the [PolarSSL Plugin](../plugins/polarssl.md) section.
+Monkey supports SSL through the [mbedTLS](http://polarssl.org) library. In order to install the SSL plugin and it dependencies please refer to the [SSL & TLS / HTTPS](../plugins/ssl_tls.md) section.

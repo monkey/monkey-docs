@@ -19,8 +19,8 @@ Monkey is mainly distributed in a compressed tarball which contains the full sou
 Once you get the tarball you can use the following simple steps to configure and compile the source code:
 
 ```shell
-$ tar zxfv monkey-1.5.0.tar.gz
-$ cd monkey-1.4.0
+$ tar zxfv monkey-1.5.6.tar.gz
+$ cd monkey-1.5.6
 $ ./configure
 $ make
 ```
@@ -51,6 +51,11 @@ Shared library options:
   --enable-shared          Build Monkey as a shared library in addition to a stand-alone server
   --enable-relaxed-plugins Allow the application to make the library load arbitrary plugins.
                            WARNING security risk, do not enable in distro packages!
+
+mbedTLS plugin options:
+  --mbedtls-headers        Set the path for mbedTLS headers
+  --mbedtls-library        Set the path where the mbedTLS library can be found
+  --mbedtls-debug-level    Set mbedTLS debug level
 
 Installation Directories:
   --prefix=PREFIX         Root prefix directory
@@ -89,14 +94,14 @@ once the server has started up, you should get something like this in your conso
 
 ```shell
 $ bin/monkey
-Monkey HTTP Daemon 1.5.0
-Built : Apr 30 2014 22:08:39 (gcc 4.8.2)
+Monkey HTTP Server v1.5.6
+Built : Mar  2 2015 15:57:09 (gcc 4.9.1)
 Home  : http://monkey-project.com
-[+] Process ID is 32659
+[+] Process ID is 19788
 [+] Server socket listening on Port 2001
-[+] 1 threads, 508 client connections per thread, total 508
+[+] 4 threads, 62 client connections per thread, total 248
 [+] Transport layer by liana in http mode
-[+] Linux Features: TCP_FASTOPEN SO_REUSEPORT TCP_AUTOCORKING
+[+] Linux Features: TCP_FASTOPEN SO_REUSEPORT
 ```
 
 by default, Monkey listen for incomming connections on TCP port 2001, give it a try using your favorite web browser at http://127.0.0.1:2001

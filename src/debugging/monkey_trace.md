@@ -42,8 +42,8 @@ To verify that __Trace__ mode was enabled, start Monkey server and check the out
 ```shell
 $ bin/monkey
 ~  0.338244 [core|monkey.c:255] main() Monkey TRACE is enabled
-Monkey HTTP Daemon 1.5.0
-Built : May  4 2014 08:46:25 (gcc 4.8.2)
+Monkey HTTP Server 1.5.6
+Built : Mar 2 2015 08:46:25 (gcc 4.8.2)
 Home  : http://monkey-project.com
 ~  0.338750 [core|mk_vhost.c:394] mk_vhost_read() Map error page: status 404 -> 404.html
 ~  0.338836 [core|mk_file.c:100] mk_file_get_info() warning: target has not execution permission

@@ -62,8 +62,8 @@ Once in the GDB prompt, launch Monkey issuing the __run__ GDB command:
 Starting program: /home/edsiper/coding/monkey/bin/monkey
 [Thread debugging using libthread_db enabled]
 Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
-Monkey HTTP Daemon 1.5.0
-Built : May  3 2014 19:43:23 (gcc 4.8.2)
+Monkey HTTP Server 1.5.6
+Built : Mar  2 2015 19:43:23 (gcc 4.8.2)
 Home  : http://monkey-project.com
 [New Thread 0x7ffff73ee700 (LWP 19097)]
 [New Thread 0x7ffff6bed700 (LWP 19098)]

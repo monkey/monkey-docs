@@ -21,4 +21,4 @@ $ make
 
 You will see that Monkey builds times faster than before and it's binary size is reduced to less than 90KB.
 
-Note: when Jemalloc is enabled, Monkey may use more memory than expected. If you want to reduce your memory usage please use the __--malloc-libc__ mode.
+Note: when Jemalloc is enabled you should notice that Monkey uses more memory as reported by _top_ or _ps_ utils, but keep in mind that the only relevant value is the RESident memory (physical memory used) and not the Virtual memory value.

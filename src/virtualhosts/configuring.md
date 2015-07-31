@@ -2,11 +2,25 @@
 
 In [Monkey](http://monkey-project.com), every resource it's mapped under a Virtual Host. Every Virtual Host is defined by creating a configuration file under the __conf/sites/__ directory. Thus, a minimal required configuration is to having one virtual host, for that end is required the existence of at least one virtual host definition-file called __default__.
 
-A Virtual Host definition, contains at least two sections named __HOST__ and __ERROR_PAGES__:
+A Virtual Host definition, contains the following section definitions:
+
+| Section name | Description                                       |
+|--------------|---------------------------------------------------|
+| HOST         | Main definitions of the virtual host in question  |
+| ERROR_PAGES  | Enable map of HTTP error codes with static pages  |
+| HANDLERS     | Specify URL handlers through regular expressions (e.g: CGI, FastCGI) |
+
+
 
 ##  HOST
 
-This section contains relevate core configuration for the Virtual Host it self such as it's name and where the files are located.
+This section contains relevate core configuration for the Virtual Host it self such as it's name and where the files are located. The keys available are:
+
+| Key             | Description                                 |
+|-----------------|---------------------------------------------|
+| ServerName      | Specify domain name                         |
+| DocumentRoot    | Absolute path for virtual host content      |
+| Redirect        | Redirect requests to a different _Location_ |
 
 ```
 [HOST]
@@ -47,11 +61,11 @@ Just note that the HTTP request will not be processed and just a HTTP redirect r
 
 When the resource requested by the HTTP client do not exists or cannot be accessed by some reason, a generic built-in page is serve explaining the nature of the problem. The __ERROR_PAGES__ section defined in the Virtual Host configuration, allow to specify custom HTML pages to be serve when a specific HTTP error status is faced, an example of common errors are:
 
-| Code | Description |
-| ----|------------ |
-| 403 | Forbidden |
-| 404 | Not Found |
-| 500 | Internal Server Error|
+| Code | Description           |
+| -----|-----------------------|
+| 403  | Forbidden             |
+| 404  | Not Found             |
+| 500  | Internal Server Error |
 
 To add custom HTML pages and associate them to a specific error status code, the Key name is the status code and the value the static file that exists under the Virtual Host in context, e.g:
 
@@ -61,6 +75,10 @@ To add custom HTML pages and associate them to a specific error status code, the
 ```
 
 On this example we are defining that for all HTTP 404 status code, the Server will send back as content body the file 404.html located under the DocumentRoot of this Virtual Host.
+
+## Handlers
+
+A _Handler_ is a plugin capable to own a HTTP request
 
 ## Plugins
 

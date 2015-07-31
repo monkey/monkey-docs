@@ -1,4 +1,4 @@
-# Monkey HTTP Server
+# Monkey Server v1.6
 
 [Monkey](http://monkey-project.com) is a lightweight and scalable Web Server. Originally made for Linux, it's also compatible with OSX. It have been designed with a strong focus on Embedded devices, therefore its scalable by nature having a low memory and CPU consumption, making it a real solution for high end production servers too.
 

@@ -2,28 +2,32 @@
 
 The Server core configuration resides in the file __monkey.conf__, which is the primary and mandatory configuration file for Monkey HTTP Server. It contains many keys that can alter the server behavior, all of them are associated under the __SERVER__ section. Below a description on each one found on this Monkey version.
 
-
-### Port
-
-Port represents the number of the TCP door on which Monkey will be listening for incoming  connections and HTTP requests. This number can have any value between 1 and 65535. Just note that for TCP ports under 1024 requires root priviledges.
-
-    Port 2001
-
-By default Monkey comes configured to use TCP port 2001, this number represents when the Project was born, but of course any available TCP port can be used.
-
 ### Listen
 
-On Linux as on any Unix OS, can exists many network interfaces that may represent physical or virtual Ethernet devices. The Listen key specify where the Server should listen for incoming connections. It must be assiged to an IPv4 or IPv6 address. By default the Server listen on all interfaces on IPv4 mode which is represented by __0.0.0.0__.
+On Linux as on any Unix OS, can exists many network interfaces that may represent physical or virtual Ethernet devices. The Listen key specify where the Server should listen for incoming connections, meaning the interface plus the TCP port. It must be assiged to an IPv4 or IPv6 address. By default the Server listen on all interfaces on IPv4 mode which is represented by __0.0.0.0__.
 
-As an example, to restrict only connections coming from localhost which is represented by the IPv4 address __127.0.0.1__, the configuration should look as follows:
+The following example will listen on all interfaces through TCP port 2001:
 
-    Listen 127.0.0.1
+    Listen 2001
 
-In the other hand, to restrict to localhost connections but in IPv6 mode you should use:
+In the other hand, to restrict to localhost connections you can do:
 
-    Listen ::1
+    Listen 127.0.0.1 2001
 
-By default this key is commented on the configuration.
+The same applies for a IPv6 based interface:
+
+    Listen ::1 2001
+
+The Listen interface support properties. As of now there is one property available called _ssl_, which instruct the listener to use a Network plugin who handle SSL/TLS connections, e.g:
+
+    Listen 2001 ssl
+
+You can specify many listeners as required, a common real-world example is:
+
+    Listen  80
+    Listen 443 ssl
+
+On this case the port __80__ is Listening for text plain connections while __443__ through some SSL/TLS layer.
 
 ### Workers
 
@@ -32,7 +36,6 @@ Monkey architecture is designed to work in asyncronous mode and in order to scal
 The Workers key defines the number of Workers to spawn when Monkey starts. By default this key comes with value __0__ which aims to spawn one worker per existent CPU core.
 
     Workers 0
-
 
 ### Timeout
 
@@ -111,19 +114,6 @@ A HTTP request may target a file which is in reallity a symbolic link in the fil
 
     SymLink Off
 
-### TransportLayer
-
-Monkey core needs to know which Plugin handle the transport layer. The value specified for this key belongs to the shortname of the Plugin. The available options are:
-
- * HTTP is provided by liana plugin
- * HTTPS is provided by polarssl plugin
-
-The default value is __liana__.
-
-    TransportLayer liana
-
-> The TransportLayer plugin must be loaded on __plugins.load__ configuration file.
-
 ### DefaultMimeType
 
 When a static file is requested and it does not contain a known extension based on the mime types registered on __monkey.mime__ configuration file, Monkey will send the mime type specified on this key.
@@ -137,3 +127,9 @@ The File Descriptor Table (FDT) it's an internal mechanism to share open file de
 The overhead in memory of this feature is around ~5KB per worker. The key accepts boolean values __on__ and __off__. By default this value is __on__.
 
     FDT on
+
+### FDLimit
+
+Defines the maximum number of file descriptors that the server can use, it can be translated to the maximum number of connections. If the value is not set, Monkey will use the soft limit imposed to the process (ulimit -n). If the variable is set, Monkey will try to increase or decrease the limit under it restrictions. For values higher that Hard Limit Monkey needs to be started by root user.
+
+    FDT 4096

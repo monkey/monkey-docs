@@ -2,7 +2,9 @@
 
 Monkey architecture is defined by a small and flexible core that expose an API interface to extend the server capabilities and behavior through Plugins. When a plugin is enabled on Monkey, it hooks to the internals and may implement a feature that affects networking, events or the HTTP cycle.
 
-The configuration file __conf/plugins.load__ aims to be an interface to enable or disable a Plugin. The file schema is headed by the __[PLUGINS]__ section and each entry represents a component to load, the key is always __Load__ and the value the absolute path to the Plugin, which is a shared library.
+Plugins can exists in two modes: static or dynamic. Static plugins are the ones who resides inside the same _monkey_ binary program and are always loaded by default, you can see the list of built-in plugins with _$ monkey -b_. Dynamic plugins are the ones who need to be enabled by configuration and are loaded just on run time.
+
+The configuration file __conf/plugins.load__ is the interface to load dynamic lugins. The file schema is headed by the __[PLUGINS]__ section and each entry represents a component to load, the key is always __Load__ and the value the absolute path to the Plugin, which is a shared library.
 
 ## Loading a Plugin
 

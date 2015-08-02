@@ -19,7 +19,7 @@ If one of the entries on the __IndexFile__ exists, the server will modify the ta
 
 ## Enable Plugin
 
-To enable the __Directory Listing__ plugin, please follow the steps mentioned on [Plugins](../configuration/plugins.md) section. The plugin name is __monkey-dirlisting.so__, so make sure the plugin entry is __Load__ and the absolute path is correct.
+If the plugin have not been built in static mode (check with _'$ monkey -b'_), you can enable the __Directory Listing__ plugin through the following the steps mentioned on [Plugins](../configuration/plugins.md) section. The plugin name is __monkey-dirlisting.so__, so make sure the plugin entry is __Load__ and the absolute path is correct.
 
 ## Configuring
 

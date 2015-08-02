@@ -8,7 +8,7 @@ The basic auth works is designed to work at Virtual Host level, so you are able 
 
 ## Enable Plugin
 
-To enable the __Auth__ plugin, please follow the steps mentioned on [Plugins](../configuration/plugins.md) section. The plugin name is __monkey-auth.so__, so make sure the plugin entry is __Load__ and the absolute path is correct.
+If the plugin have not been built in static mode (check with _'$ monkey -b'_), you can enable the __Auth__ plugin through the following the steps mentioned on [Plugins](../configuration/plugins.md) section. The plugin name is __monkey-auth.so__, so make sure the plugin entry is __Load__ and the absolute path is correct.
 
 ## Configuring
 
@@ -44,5 +44,14 @@ Edit your virtual host configuration file and specify the Auth rules, e.g: edit 
     Title    "Let's protect our content..."
     Users    /etc/monkey/plugins/auth/users.mk
 ```
+
+The __Auth__ plugin is a handler, so we need also to register it into the __HANDLER__ section as follows:
+
+```python
+[HANDLERS]
+    Match  /.*  auth
+```
+
+When [Monkey](http://monkey-project.com) process the Handlers, it will match the regular expression rules for all requests, and then the __Auth__ plugin will try to match a specific location through the __[AUTH]__ section. A match through the Handler regular expression can have many locations.
 
 Now restart [Monkey](http://monkey-project.com) and reload your web page, you will get the authentication box for the specific virtual host. If you add/delete users you will need to restart the service to make the changes take effect.

@@ -11,7 +11,6 @@ A Virtual Host definition, contains the following section definitions:
 | HANDLERS     | Specify URL handlers through regular expressions (e.g: CGI, FastCGI) |
 
 
-
 ##  HOST
 
 This section contains relevate core configuration for the Virtual Host it self such as it's name and where the files are located. The keys available are:
@@ -78,8 +77,22 @@ On this example we are defining that for all HTTP 404 status code, the Server wi
 
 ## Handlers
 
-A _Handler_ is a plugin capable to own a HTTP request
+A _Handler_ section defines the association of specific HTTP requests URI and plugin handlers through regular expression rules. A Virtual Host can define multiple _handlers_ and these are processed in order from top to bottom, the one that matches will own the responsibility to perform some action.
+
+_Handlers_ are implemented as plugins (static or dynamic), so the handler associated  needs to be enabled at runtime and general configuration format is the following:
+
+```
+Match  REGULAR_EXPRESSION  PLUGIN_SHORTNAME
+```
+
+The following example demonstrate how a Virtual Host defines rules for HTTP requests that it's URI ends in __.php__ and other to process CGI scripts:
+
+```python
+[HANDLERS]
+    Match  /.*\.php          fastcgi
+    Match  /cgi-bin/.*\.cgi  cgi
+```
 
 ## Plugins
 
-Every Plugin may be able to define it owns sections on each Virtual Host, as an example we can mention the __Logger__ plugin which defines rules for files where it will write server events. For every specific section found different than __HOST__ and __ERROR_PAGES__, please refer to the plugin documentation for more details.
+On the Virtual Host configuration file, each plugin may define it owns sections, as an example we can mention the __Logger__ plugin which defines rules for files where it will write server events. For every specific section found different than __HOST__, __ERROR_PAGES__ and __HANDLERS__, please refer to the plugin documentation for more details.

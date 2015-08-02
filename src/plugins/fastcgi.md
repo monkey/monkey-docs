@@ -8,51 +8,45 @@ Using FastCGI is highly recommended when running scripting web programs such as 
 
 ## Enable Plugin
 
-To enable the __FastCGI__ plugin, please follow the steps mentioned on [Plugins](../configuration/plugins.md) section. The plugin name is __monkey-fastcgi.so__, so make sure the plugin entry is __Load__ and the absolute path is correct.
+If the plugin have not been built in static mode (check with _'$ monkey -b'_), you can enable the __FastCGI__ plugin through the following the steps mentioned on [Plugins](../configuration/plugins.md) section. The plugin name is __monkey-fastcgi.so__, so make sure the plugin entry is __Load__ and the absolute path is correct.
 
 ## Configuring
 
-The _FastCGI_ plugin takes a global setup that affect all Virtual Hosts at once on the configuration file __conf/plugins/fastcgi/fastcgi.conf__. The configuration schemas defines two available sections: __[FASTCGI_SERVER]__ and __[FASTCGI_LOCATION]__:
+The _FastCGI_ plugin takes a global setup on the configuration file __conf/plugins/fastcgi/fastcgi.conf__ that affect all Virtual Hosts. The configuration schema defines the the section __[FASTCGI_SERVER]__ and is used as a reference for all handlers.
+
+> FastCGI plugin is a handler, for hence it requires a match rule in the Virtual Host configuration file.
+
+### Specify a handler for FastCGI
+
+Edit your Virtual Host configuration file (e.g: _conf/sites/default) and add a rule to your __HANDLERS__ section, e.g:
+
+```python
+[HANDLERS]
+    Match  /.*\.php  fastcgi
+```
+
+The match rule defined, specify that the __FastCGI__ plugin will handle all incoming request which it URI ends in _.php_. Now proceed to configurate the global FastCGI server definition.
 
 ### FASTCGI_SERVER
 
-The section named __FASTCGI_SERVER__ aims to represent a FastCGI backend server that is listening for incoming FastCGI requests. It supports four main keys: ServerName, ServerAddr, ServerPath and MaxConnections.
+The section named __FASTCGI_SERVER__ aims to represent a FastCGI backend server that is listening for incoming FastCGI requests. It supports three main keys: ServerName, ServerAddr and ServerPath.
 
-| key | description |
-|-----|-------------|
+| key       | description                                 |
+|-----------|---------------------------------------------|
 |ServerName | Local name to represent the FastCGI server. |
 |ServerAddr | If the FastCGI Server is listening on a TCP connection, use this key to specify as value the Host IP and target TCP port, e.g: 192.168.0.4:9000. |
 |ServerPath | Use this key if the FastCGI Server is listening in a local Unix socket file.|
-|MaxConnections | Set the maximum number of open connections to the FastCGI Server. This number is a total across Monkey workers.|
 
-> Note: You may use ServerAddr or ServerPath, not both.
-
-### FASTCGI_LOCATION
-
-This section aims to trap a HTTP request that targets a specific URL location. So when a match occurs, the FastCGI plugin redirect the requests to the _FASTCGI_SERVER_ associated on this Location definition. The section supports four main keys: LocationName, ServerNames, KeepAlive and Match:
-
-| key | description |
-|-----|-------------|
-| LocationName | Local name to represent this location |
-| ServerNames  | Space separated list of FastCGI Servers (required) |
-| KeepAlive    | Keep FastCGI server connections alive. Make sure to tune the MaxConnections on __[FASTCGI_SERVER]__ directives and the Worker count on __[SERVER]__ in __conf/monkey.conf__ to avoid threads stall if available concurrent connections is less than the number of workers. Boolean value, it accepts __on__ or __off__ (default: __off__)|
-| Match        | Space separated list of regular expression.|
+> note: You may use ServerAddr or ServerPath, not both.
 
 ### Configuration Example for PHP-FPM
 
 The following example aims to provide a setup to make Monkey FastCGI plugin talk to a FastCGI Server that process PHP scripts: __php5-fpm__.
 
-```Python
+```python
 [FASTCGI_SERVER]
 	ServerName     php5-fpm1
 	ServerPath     /var/run/php5-fpm.sock
-	MaxConnections 20
-
-[FASTCGI_LOCATION]
-	LocationName   php5_location
-	ServerNames    php5-fpm1
-	KeepAlive      On
-	Match          /*.php
 ```
 
 This example will pass the control of each request to a file ending in __.php__ to the FastCGI server running on the Unix socket __/var/run/php5-fpm.sock__ file.

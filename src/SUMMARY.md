@@ -23,7 +23,7 @@
     * [Log Writer](plugins/log_writer.md)
     * [Liana](plugins/liana.md)
     * [Mandril Security](plugins/mandril_security.md)
-    * [Secure Socket Layers](plugins/polarssl.md)
+    * [SSL / TLS](plugins/tls.md)
 * [Embedded Linux](embedded/README.md)
     * [Raspberry Pi](embedded/raspberry.md)
     * [Yocto Project](embedded/yocto.md)

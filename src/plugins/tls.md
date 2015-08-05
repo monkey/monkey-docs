@@ -4,11 +4,14 @@
 
 ## Requirements
 
-As said, the __TLS__ plugin requires to have access to the [mbedTLS library](http://tls.mbed.org), we only support the version >= 2.0.0. If that version is not available on your Linux distribution you may consider to compile it from sources. Besides that, the only extra requirement is an updated __C compiler__ and the CMake tool.
+Starting from _Monkey v1.6_, we distribute the mbedTLS library as part of our sources, but that dependency is just build if you enable the __TLS__ plugin. The library will be linked statically.
+
+If for some reason you want to use a different [mbedTLS library](http://tls.mbed.org) , you can use the optional __--mbedtls-shared__ configure script option for that purpose or it equivalent __-DWITH_MBEDTLS_SHARED=1__ CMake option.
 
 ## Build
 
-If [mbedTLS Library](http://tls.mbed.org) is installed and known by the system, we only need to tell Monkey to include the __TLS__ plugin in the build phase:
+Enable TLS support in Monkey is a straightforward step, you only need to tell Monkey to include the __TLS__ plugin in the build phase:
+
 
 ```shell
 $ ./configure --enable-plugins=tls
@@ -29,6 +32,13 @@ $ cd mbedtls-2.*
 $ cmake -DUSE_SHARED_MBEDTLS_LIBRARY=on .
 $ make
 $ make install
+```
+
+then let Monkey use that shared library version:
+
+```shell
+$ ./configure --enable-plugins=tls --mbedtls-shared
+$ make
 ```
 
 ## Enable Plugin

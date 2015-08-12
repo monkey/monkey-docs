@@ -55,7 +55,7 @@ Installation Directories:
   --prefix=PREFIX         Root prefix directory
   --sbindir=BINDIR        Binary files (executables)
   --libdir=LIBDIR         Libraries
-  --incdir=INCDIR         Header install path
+  --includedir=INCDIR     Header install path
   --sysconfdir=SYSCONFDIR Configuration files
   --webroot=WEB_ROOT      Path to default web site files
   --mandir=MANDIR         Manpages - documentation

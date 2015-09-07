@@ -4,6 +4,7 @@
     * [License](about/license.md)
 * [Getting Started](getting_started/README.md)
     * [Installation](getting_started/installation.md)
+    * [Debian/Ubuntu](getting_started/debian_ubuntu.md)
     * [Memory Allocator](getting_started/memory_allocator.md)
 * [Configuration](configuration/README.md)
     * [Structure](configuration/structure.md)

@@ -18,9 +18,7 @@ On Debian and derivated systems such as Raspbian, you need to add our APT server
 deb http://apt.monkey-project.com/raspbian wheezy main
 ```
 
-## Update your repositories database
-
-Now let your system update the apt database:
+then update your repository cache with:
 
 ```shell
 $ sudo apt-get update

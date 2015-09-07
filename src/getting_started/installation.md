@@ -6,7 +6,7 @@ Start with Monkey is pretty easy, you don't need to be a privileged system user,
 
 Monkey uses very low CPU and Memory consumption, it works fine on any x86, x86_64 platform without problems.
 
-Regarding to the software required to run Monkey successfully, if yuu have a Linux box, it will require a Kernel version 2.6.32 (at least), for OSX it needs at least Yosemite. Besides that, the core of Monkey just requires two basic libraries: pthreads and libc, if you use Linux, we are 99% sure that you should not care about this requirement.
+Regarding to the software required to run Monkey successfully, if you have a Linux box, it will require a Kernel version 2.6.32 (at least), for OSX it needs at least Yosemite. Besides that, the core of Monkey just requires two basic libraries: pthreads and libc, if you use Linux, we are 99% sure that you should not care about this requirement.
 
 ## Download
 

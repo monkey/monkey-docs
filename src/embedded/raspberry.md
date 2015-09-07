@@ -2,32 +2,34 @@
 
 [Monkey](http://monkey-project.com) is fully supported on the [Raspberry Pi](http://raspberrypi.org) board. If you want to use Monkey in your Raspberry Pi device, you can build it from sources as described in the [Getting Started](../getting_started/README.md) section or use our binary __Debian__ packages that can be obtained from our special APT repository for Raspbian.
 
-## Installing using APT
+## Server GPG key
 
-In your __/etc/apt/sources.list__ configuration file append the following at the end:
+The first step is to add our server GPG key to your keyring, on that way you can get our signed packages:
 
-```Shell
-deb http://packages.monkey-project.com/primates_pi primates_pi main
+```shell
+$ wget -qO - http://apt.monkey-project.com/monkey.key | sudo apt-key add -
 ```
 
-Then update your cache references:
+## Update your sources lists
 
-```Shell
+On Debian and derivated systems such as Raspbian, you need to add our APT server entry to your sources lists, please add the following content at bottom of your /etc/apt/sources.list file:
+
+```shell
+deb http://apt.monkey-project.com/raspbian wheezy main
+```
+
+## Update your repositories database
+
+Now let your system update the apt database:
+
+```shell
 $ sudo apt-get update
 ```
 
-Now you will be able to install Monkey on your board:
+## Install Monkey
 
-```Shell
+Using the apt-get command you are able now to install the latest version of Monkey HTTP Server:
+
+```shell
 $ sudo apt-get install monkey
 ```
-
-After that last step, Monkey will be already running , you can do a simple test with __curl__ to test connectivity:
-
-```Shell
-curl -i http://raspberry_ip:2001/
-```
-
-## Using SSL/TLS
-
-Monkey supports SSL/TLS through the [mbedTLS](http://tls.mbed.org) library. In order to install the dependency please refer to the [TLS](../plugins/tls.md) plugin documentation.

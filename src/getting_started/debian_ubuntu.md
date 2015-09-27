@@ -17,14 +17,14 @@ On Debian and derivated systems such as Ubuntu, you need to add our APT server e
 #### Ubuntu 15.04 (vivid)
 
 ```
-deb http://apt.fluentbit.io/ubuntu vivid main
+deb http://apt.monkey-project.com/ubuntu vivid main
 ```
 
 #### Debian 8 (jessie)
 
 ```
-deb http://apt.fluentbit.io/debian jessie main
-
+deb http://apt.monkey-project.com/debian jessie main
+```
 
 ### Update your repositories database
 

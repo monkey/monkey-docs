@@ -12,15 +12,25 @@ $ wget -qO - http://apt.monkey-project.com/monkey.key | sudo apt-key add -
 
 ## Update your sources lists
 
-On Debian and derivated systems, you need to add our APT server entry to your sources lists, please add the following content at bottom of your /etc/apt/sources.list file:
+On Debian and derivated systems such as Ubuntu, you need to add our APT server entry to your sources lists, please add the following content at bottom of your __/etc/apt/sources.list__ file:
 
-```shell
-deb http://apt.monkey-project.com/ubuntu vivid main
+#### Ubuntu 15.04 (vivid)
+
+```
+deb http://apt.fluentbit.io/ubuntu vivid main
 ```
 
-then update your repository cache with:
+#### Debian 8 (jessie)
 
-```shell
+```
+deb http://apt.fluentbit.io/debian jessie main
+
+
+### Update your repositories database
+
+Now let your system update the _apt_ database:
+
+```bash
 $ sudo apt-get update
 ```
 

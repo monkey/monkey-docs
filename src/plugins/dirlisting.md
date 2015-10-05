@@ -23,7 +23,7 @@ If the plugin have not been built in static mode (check with _'$ monkey -b'_), y
 
 ## Configuring
 
-Once the plugin is loaded, you need to define which __Theme__ the plugin will use to render the directory content in HTML. At the moment the only __Theme__ available is called __Guineo__.
+Once the plugin is loaded, you need to define which __Theme__ the plugin will use to render the directory content in HTML. At the moment the themes available are __guineo__ and __bootstrap__.
 
 The main configuration file resides in __conf/plugins/dirlisting/dirlisting.conf__, and it contain the following schema:
 
@@ -32,3 +32,10 @@ The main configuration file resides in __conf/plugins/dirlisting/dirlisting.conf
     Theme guineo
 ```
 The principal section is __[DIRLISTING]__ and allows just one key called __Theme__ to specify which theme should be loaded. The theme directory must exists in the same path than __dirlisting.conf__ exists.
+
+As the __Dirlisting__ plugin is a handler, it needs to be enabled on the Virtual Host definition under the __HANDLERS__ sections through a Match rule. The following example will define a Handler rule to make the __Dirlisting__ plugin process all incoming request that refers to a directory :
+
+```python
+[HANDLERS]
+    Match  /.*  dirlisting
+```

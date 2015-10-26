@@ -1,4 +1,4 @@
-# Installation
+# Build and Installation
 
 Start with Monkey is pretty easy, you don't need to be a privileged system user, you can run it locally or install it in a generic path.
 
@@ -8,9 +8,16 @@ Monkey uses very low CPU and Memory consumption, it works fine on any x86, x86_6
 
 Regarding to the software required to run Monkey successfully, if you have a Linux box, it will require a Kernel version 2.6.32 (at least), for OSX it needs at least Yosemite. Besides that, the core of Monkey just requires two basic libraries: pthreads and libc, if you use Linux, we are 99% sure that you should not care about this requirement.
 
+## Build System
+
+Before to proceed to build Monkey, you have be aware that the build system is based on CMake and we _optionally_ provides a bash script called _configure_ that works as a wrapper for who's not familiar with CMake.
+
+Below you will find instructions and options available at our configure script, if you want to use the CMake way, please make sure to read the [Monkey + CMake](cmake_options.md) documentation for further explanations of the options available.
+
+
 ## Download
 
-Monkey is mainly distributed in a compressed tarball which contains the full source code, the available releases can be found in the official site http://monkey-project.com. At the moment of this document is written, the 1.6.0 version is available. You can find more details in the [downloads](http://monkey-project.com/downloads) section.
+Monkey is mainly distributed in a compressed tarball which contains the full source code, the available releases can be found in the official site http://monkey-project.com. At the moment of this document is written, the 1.6.x series is available. You can find more details in the [downloads](http://monkey-project.com/downloads) section.
 
 ## Configure and compile
 

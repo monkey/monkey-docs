@@ -86,3 +86,4 @@ The following options affects the setup for the file system paths when installin
 | INSTALL_LOGDIR        | Log directory path                |
 | PID_PATH              | Target path to store the pid file |
 | PID_FILE              | Name of the pid file              |
+| SYSTEMD_DIR           | Absolute path to systemd script   |

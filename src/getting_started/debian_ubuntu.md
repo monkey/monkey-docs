@@ -14,10 +14,10 @@ $ wget -qO - http://apt.monkey-project.com/monkey.key | sudo apt-key add -
 
 On Debian and derivated systems such as Ubuntu, you need to add our APT server entry to your sources lists, please add the following content at bottom of your __/etc/apt/sources.list__ file:
 
-#### Ubuntu 15.04 (vivid)
+#### Ubuntu 15.10 (Wily)
 
 ```
-deb http://apt.monkey-project.com/ubuntu vivid main
+deb http://apt.monkey-project.com/ubuntu wily main
 ```
 
 #### Debian 8 (jessie)

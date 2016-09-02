@@ -51,7 +51,7 @@ As specified on the [Server](../configuration/server.md) configuration section, 
 
 ```Python
 [SERVER]
-    Listen 443 ssl
+    Listen 443 tls
 ```
 
 With that setup, we have instructed that the Listener on TCP port 443 will use our TLS plugin that provides _ssl_ capabilities.
